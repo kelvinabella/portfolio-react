@@ -1,0 +1,66 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.post {
+  @include margin-bottom(1);
+  &:last-child {
+    @include margin-bottom(0.5);
+  }
+  &__title {
+    display: inline-block;
+    margin-right: 5px;
+    text-transform: uppercase;
+    color: $color-secondary;
+    font-size: $typographic-base-font-size * 1.25;
+    @include line-height(1);
+    &-link {
+      color: $color-secondary;
+      &:hover,
+      &:focus {
+        color: $color-secondary;
+        border-bottom: 1px solid $color-secondary;
+      }
+    }
+  }
+  &__subtitle {
+    font-size: 15px;
+    font-style: italic;
+  }
+  &__description {
+    font-size: $typographic-base-font-size;
+    margin-top: -25px;
+    @include line-height(1);
+  }
+  &__meta {
+    &-time {
+      font-size: $typographic-small-font-size;
+      color: $color-base;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &-divider {
+      margin: 0 5px;
+    }
+    &-category {
+      &-link {
+        font-size: $typographic-small-font-size;
+        color: $color-secondary;
+        font-weight: 500;
+        text-transform: uppercase;
+        &:hover,
+        &:focus {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+  &__readmore {
+    font-size: $typographic-base-font-size;
+    color: $color-primary;
+    &:hover,
+    &:focus {
+      color: $color-primary;
+      border-bottom: 1px solid $color-secondary;
+    }
+  }
+}
