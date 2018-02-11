@@ -165,6 +165,55 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: 'gatsby-plugin-accessibilityjs',
+      options: {
+        injectStyles: `
+        .accessibility-error {
+          box-shadow: 0 0 3px 1px #f00;
+          background-color: rgba(255, 0, 0, 0.25);
+          position: relative;
+        }
+        .accessibility-error:before {
+          content: "A11Y";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #fff;
+          font-size: 10px;
+          background-color: rgba(255, 0, 0, 0.5);
+          transform: translateY(-100%);
+        }
+      `
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'GatsbyJS',
+        short_name: 'GatsbyJS',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'minimal-ui',
+        icons: [
+          {
+            // Everything in /static will be copied to an equivalent
+            // directory in /public during development and build, so
+            // assuming your favicons are in /static/favicons,
+            // you can reference them here
+            src: '/favicons/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/favicons/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      }
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
