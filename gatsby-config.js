@@ -148,24 +148,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/favicon.png',
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false
-        }
-      }
-    },
-    {
       resolve: 'gatsby-plugin-accessibilityjs',
       options: {
         injectStyles: `
@@ -198,23 +180,32 @@ module.exports = {
         display: 'minimal-ui',
         icons: [
           {
-            // Everything in /static will be copied to an equivalent
-            // directory in /public during development and build, so
-            // assuming your favicons are in /static/favicons,
-            // you can reference them here
-            src: '/favicons/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/favicons/android-chrome-512x512.png',
-            sizes: '512x512',
+            src: '/favicon.png',
+            sizes: '16x16',
             type: 'image/png'
           }
         ]
       }
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './static/favicon.png',
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false
+        }
+      }
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss-sass',
