@@ -91,6 +91,10 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-external-links',
+            options: { target: '_blank' }
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: { maxWidth: 960 }
           },
@@ -181,7 +185,7 @@ module.exports = {
         icons: [
           {
             src: '/favicon.png',
-            sizes: '16x16',
+            sizes: '1024x1024',
             type: 'image/png'
           }
         ]

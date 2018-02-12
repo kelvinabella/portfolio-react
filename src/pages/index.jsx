@@ -17,6 +17,34 @@ class IndexRoute extends React.Component {
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={subtitle} />
+          <meta name="author" content="Kelvin Abella" />
+          <meta property="og:title" content="Kelvin Abella | kelvtudio" />
+          <meta
+            property="og:description"
+            content="Personal portfolio and branding page of Kelvin Abella - Web developer."
+          />
+          <meta property="og:image" content="" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@abellakelvin" />
+          <meta name="twitter:creator" content="@Kelvin Abella" />
+          <meta name="twitter:title" content="Kelvin Abella | kelvtudio" />
+          <meta
+            name="twitter:description"
+            content="Personal portfolio and branding page of Kelvin Abella - Web developer."
+          />
+          <meta name="twitter:image:src" content="" />
+          <meta property="og:title" content="Kelvin Abella | kelvtudio" />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="http://www.kelvstudio.com/" />
+          <meta
+            property="og:description"
+            content="Personal portfolio and branding page of Kelvin Abella - Web developer."
+          />
+          <meta property="og:site_name" content="kelvtudio" />
+          <meta property="article:published_time" content="2016-02-20T011:00:00+08:00" />
+          <meta property="article:modified_time" content="2016-02-20T011:30:00+08:00" />
+
+          <html lang="en" />
         </Helmet>
         <Sidebar {...this.props} />
         <div className="content">
