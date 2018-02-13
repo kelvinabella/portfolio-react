@@ -1,10 +1,14 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Sidebar from '../components/Sidebar';
 
 class NotFoundRoute extends React.Component {
   render() {
+    const { title } = this.props.data.site.siteMetadata;
+
     return (
       <div>
+        <Helmet title={`Not Found - ${title}`} />
         <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">
