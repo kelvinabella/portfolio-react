@@ -155,35 +155,13 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-accessibilityjs',
-      options: {
-        injectStyles: `
-        .accessibility-error {
-          box-shadow: 0 0 3px 1px #f00;
-          background-color: rgba(255, 0, 0, 0.25);
-          position: relative;
-        }
-        .accessibility-error:before {
-          content: "A11Y";
-          position: absolute;
-          top: 0;
-          left: 0;
-          color: #fff;
-          font-size: 10px;
-          background-color: rgba(255, 0, 0, 0.5);
-          transform: translateY(-100%);
-        }
-      `
-      }
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'kelvstudio',
         short_name: 'kelvstudio',
         start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
+        background_color: 'white',
+        theme_color: 'white',
         display: 'minimal-ui',
         icons: [
           {

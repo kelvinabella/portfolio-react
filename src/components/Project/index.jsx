@@ -9,7 +9,7 @@ class Post extends React.Component {
       <div className="post">
         <div className="post__meta" />
         <div>
-          <a href={slug} target="_blank">
+          <a href={slug} target="_blank" rel="noopener noreferrer" aria-label="Link to project">
             <h2 className="post__title">{title}</h2>
             <span className="post__subtitle">({technology})</span>
           </a>
